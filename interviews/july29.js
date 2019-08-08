@@ -63,11 +63,13 @@ const fizzbuzz = function(){
   const addition = function(arr, target){
     let hash = {}
     for (let i = 0; i<arr.length; i++){
-      let key = (target - arr[i])
-      if (!hash[arr[i]]){
-        //store compliment at this positions
+      let comp = (target - arr[i])
+      let added = (target-comp)
+      if (hash[added]){
+        return true
+      } else if (!hash[comp]){
+          hash[comp] = comp
       }
-      //else if we've seen it there was another value in the past
       
       console.log(hash)
     }
