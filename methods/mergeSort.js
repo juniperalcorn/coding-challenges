@@ -40,3 +40,6 @@ const mergeSort = (arr) =>{
 }
 
 console.log(mergeSort(test))
+
+//big o of O(n log n)
+//this is the best you can do for a sorting algorithm!
