@@ -20,14 +20,17 @@ const factorial = (num) =>{
     return result
   }
   
-  console.log(factorial(5))
+//   console.log(factorial(5))
   
-  // const factorial = (num) =>{
-  //   let next = num-1
-  //   while (next > 0){
-  //     num * factorial(next)
-  //   }
-  //   return num
-  // }
-  
-  // factorial(3)
+//
+
+const factorialRec = (num) =>{
+    
+    let result = 1
+    const recursive = (num) =>{
+        if (num === 0) return 1
+        return num * recursive(num-1)
+    }
+    return result * recursive(num)
+}
+  console.log(factorialRec(5))
